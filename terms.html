@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Leadership Academy - Professional Development Programs">
+    <meta name="keywords" content="terms of service, legal, professional development, leadership">
+    <meta name="author" content="Leadership Academy">
+    <title>Terms of Service | Leadership Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+        }
+        
+        .accent-coral {
+            color: #FF5A5F;
+        }
+        
+        .accent-yellow {
+            color: #FFD166;
+        }
+        
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(255, 90, 95, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-secondary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(255, 209, 102, 0.3);
+        }
+        
+        .feature-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+            border-color: #FF5A5F;
+        }
+        
+        .benefit-item {
+            background: linear-gradient(135deg, #262626 0%, #1F1F1F 100%);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.15);
+        }
+        
+        .testimonial-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+        }
+        
+        .faq-item {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #404040;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #FF5A5F;
+        }
+        
+        .faq-icon {
+            transition: all 0.3s ease-out;
+            width: 24px;
+            height: 24px;
+            color: #FF5A5F;
+        }
+        
+        .faq-answer {
+            margin-top: 1rem;
+            color: #D1D5DB;
+            line-height: 1.75;
+            transition: all 0.3s ease-out;
+        }
+        
+        .star-rating {
+            color: #FFD166;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.05) 100%),
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop') center/cover;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .cta-overlay {
+            background-color: rgba(26, 26, 26, 0.85);
+        }
+        
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 90, 95, 0.1);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover .icon-container {
+            background-color: rgba(255, 90, 95, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .sticky-header {
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 90, 95, 0.1);
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .policy-content {
+            max-width: 4xl;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #FF5A5F;
+        }
+
+        .policy-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+
+        .policy-section p {
+            color: #D1D5DB;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+            color: #D1D5DB;
+            line-height: 1.75;
+        }
+
+        .policy-section ul li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 sticky-header">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex justify-between items-center">
+            <div class="flex items-center justify-between w-full">
+                <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight">Leadership</span>
+                </a>
+                <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s" class="text-gray-300 hover:text-[#FF5A5F] transition-colors duration-300 font-medium">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                    Terms of <span class="text-[#FF5A5F]">Service</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-4 leading-relaxed font-medium">
+                    Please read these terms carefully before using our platform
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    Last updated: January 2025
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto policy-content">
+            <!-- Introduction Section -->
+            <div class="policy-section">
+                <h2>Introduction</h2>
+                <p>
+                    Welcome to Leadership Academy ("Company," "we," "us," "our," or "Platform"). These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and Leadership Academy regarding your access to and use of our website, mobile applications, and all associated services, content, and materials (collectively, the "Service").
+                </p>
+                <p>
+                    By accessing, browsing, or using the Service in any manner, including but not limited to visiting our website, downloading our mobile application, or enrolling in our professional development programs, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms in their entirety, you are not authorized to use the Service and must immediately cease all access and use.
+                </p>
+                <p>
+                    Leadership Academy reserves the right to modify these Terms at any time without prior notice. Your continued use of the Service following any changes constitutes your acceptance of the modified Terms. We recommend that you review these Terms periodically to stay informed of any updates.
+                </p>
+            </div>
+
+            <!-- User Agreements Section -->
+            <div class="policy-section">
+                <h2>User Agreements and Responsibilities</h2>
+                
+                <h3>Account Registration and Eligibility</h3>
+                <p>
+                    To access certain features of the Service, you may be required to create an account and provide accurate, current, and complete information. You represent and warrant that you are at least 18 years of age and possess the legal authority to enter into this agreement. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify Leadership Academy immediately of any unauthorized use of your account or any other breach of security.
+                </p>
+
+                <h3>User Conduct and Compliance</h3>
+                <p>
+                    You agree to use the Service only for lawful purposes and in a manner that does not infringe upon the rights of others or restrict their use and enjoyment of the Service. You further agree not to engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Service, including but not limited to:
+                </p>
+                <ul>
+                    <li>Harassing, abusing, or threatening any individual or group</li>
+                    <li>Posting obscene, offensive, or defamatory content</li>
+                    <li>Disrupting the normal flow of dialogue within the Service</li>
+                    <li>Attempting to gain unauthorized access to the Service or its systems</li>
+                    <li>Interfering with the proper functioning of the Service</li>
+                </ul>
+
+                <h3>Intellectual Property Rights</h3>
+                <p>
+                    All content, materials, and intellectual property contained within the Service, including but not limited to text, graphics, logos, images, audio clips, digital downloads, and software, are the exclusive property of Leadership Academy or its content suppliers and are protected by international copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to access and use the Service for your personal, non-commercial purposes only. You may not reproduce, distribute, modify, or transmit any content without the prior written consent of Leadership Academy.
+                </p>
+
+                <h3>User-Generated Content</h3>
+                <p>
+                    If you submit, post, or display content on the Service, you grant Leadership Academy a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute such content. You represent and warrant that you own or have the necessary rights to the content you submit and that such content does not violate any third-party rights or applicable laws.
+                </p>
+            </div>
+
+            <!-- Acceptable Use Section -->
+            <div class="policy-section">
+                <h2>Acceptable Use Policy</h2>
+                
+                <h3>Prohibited Activities</h3>
+                <p>
+                    You agree not to engage in any of the following prohibited activities:
+                </p>
+                <ul>
+                    <li>Violating any applicable federal, state, or international laws or regulations</li>
+                    <li>Infringing on the intellectual property rights of Leadership Academy or third parties</li>
+                    <li>Transmitting viruses, malware, or any code of a destructive nature</li>
+                    <li>Attempting to gain unauthorized access to the Service or its systems</li>
+                    <li>Engaging in any form of hacking, phishing, or social engineering</li>
+                    <li>Collecting or tracking personal information of others without consent</li>
+                    <li>Spamming, phishing, or sending unsolicited communications</li>
+                    <li>Impersonating any person or entity</li>
+                    <li>Reselling or redistributing access to the Service</li>
+                    <li>Using automated tools or bots to access the Service without authorization</li>
+                </ul>
+
+                <h3>Program Participation Requirements</h3>
+                <p>
+                    If you enroll in any professional development programs offered through the Service, you agree to:
+                </p>
+                <ul>
+                    <li>Participate in good faith and with genuine intent to develop professionally</li>
+                    <li>Comply with all program guidelines and requirements</li>
+                    <li>Respect the intellectual property and confidential information shared during programs</li>
+                    <li>Maintain respectful and professional conduct with instructors, mentors, and fellow participants</li>
+                    <li>Complete assessments and evaluations as required by the program</li>
+                </ul>
+
+                <h3>Payment and Billing</h3>
+                <p>
+                    If you purchase programs, courses, or services through the Service, you agree to pay all applicable fees in accordance with the pricing information provided. All payments must be made through the authorized payment methods available on the Service. You are responsible for maintaining accurate and current billing information. Leadership Academy reserves the right to suspend or terminate your access to the Service if payment is not received.
+                </p>
+
+                <h3>Refund Policy</h3>
+                <p>
+                    Refund eligibility and procedures are governed by Leadership Academy's Refund Policy, which is incorporated by reference into these Terms. Please refer to our Refund Policy for detailed information regarding refund requests, timelines, and conditions.
+                </p>
+            </div>
+
+            <!-- Limitation of Liability Section -->
+            <div class="policy-section">
+                <h2>Limitation of Liability and Disclaimers</h2>
+                
+                <h3>Disclaimer of Warranties</h3>
+                <p>
+                    THE SERVICE IS PROVIDED ON AN "AS-IS" AND "AS-AVAILABLE" BASIS WITHOUT ANY WARRANTIES, EXPRESS OR IMPLIED. LEADERSHIP ACADEMY EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. LEADERSHIP ACADEMY DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+                </p>
+
+                <h3>Limitation of Liability</h3>
+                <p>
+                    IN NO EVENT SHALL LEADERSHIP ACADEMY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF USE, OR OTHER INTANGIBLE LOSSES, EVEN IF LEADERSHIP ACADEMY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. YOUR SOLE AND EXCLUSIVE REMEDY FOR ANY CLAIM AGAINST LEADERSHIP ACADEMY SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU TO LEADERSHIP ACADEMY IN THE TWELVE MONTHS PRECEDING THE CLAIM.
+                </p>
+
+                <h3>Third-Party Links and Content</h3>
+                <p>
+                    The Service may contain links to third-party websites and resources. Leadership Academy is not responsible for the content, accuracy, or practices of these external sites. Your access to and use of third-party websites are governed by their respective terms of service and privacy policies. Leadership Academy does not endorse any third-party content and shall not be liable for any damages or losses arising from your use of third-party resources.
+                </p>
+
+                <h3>Results and Outcomes</h3>
+                <p>
+                    Leadership Academy makes no guarantees regarding the results or outcomes of participating in our programs. Individual results may vary based on numerous factors including personal effort, prior experience, organizational context, and external circumstances. Success in professional development requires active participation and commitment from the participant.
+                </p>
+
+                <h3>Professional Advice Disclaimer</h3>
+                <p>
+                    The content provided through the Service is for educational and informational purposes only and should not be construed as professional legal, financial, medical, or psychological advice. If you require professional advice, you should consult with a qualified professional in the relevant field. Leadership Academy is not liable for any decisions or actions taken based on information provided through the Service.
+                </p>
+            </div>
+
+            <!-- Indemnification Section -->
+            <div class="policy-section">
+                <h2>Indemnification</h2>
+                <p>
+                    You agree to indemnify, defend, and hold harmless Leadership Academy, its officers, directors, employees, agents, and successors from and against any and all claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising out of or resulting from:
+                </p>
+                <ul>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any applicable law or regulation</li>
+                    <li>Your infringement of any third-party intellectual property rights</li>
+                    <li>Your use of the Service in violation of these Terms</li>
+                    <li>Any content you submit or post to the Service</li>
+                </ul>
+            </div>
+
+            <!-- Termination Section -->
+            <div class="policy-section">
+                <h2>Termination</h2>
+                <p>
+                    Leadership Academy reserves the right to suspend or terminate your access to the Service at any time, with or without cause, and with or without notice. Upon termination, your right to use the Service ceases immediately. All provisions of these Terms that by their nature should survive termination, including limitations on liability, indemnification, and intellectual property provisions, shall survive any termination or expiration of these Terms.
+                </p>
+            </div>
+
+            <!-- Governing Law Section -->
+            <div class="policy-section">
+                <h2>Governing Law and Jurisdiction</h2>
+                <p>
+                    These Terms and your use of the Service shall be governed by and construed in accordance with the laws of the jurisdiction in which Leadership Academy is located, without regard to its conflict of law principles. You agree to submit to the exclusive jurisdiction of the courts located in that jurisdiction for the resolution of any disputes arising out of or related to these Terms or the Service.
+                </p>
+            </div>
+
+            <!-- Severability Section -->
+            <div class="policy-section">
+                <h2>Severability</h2>
+                <p>
+                    If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, or if such modification is not possible, the provision shall be severed. The remaining provisions of these Terms shall continue in full force and effect.
+                </p>
+            </div>
+
+            <!-- Entire Agreement Section -->
+            <div class="policy-section">
+                <h2>Entire Agreement</h2>
+                <p>
+                    These Terms, together with our Privacy Policy and any other policies or agreements referenced herein, constitute the entire agreement between you and Leadership Academy regarding your use of the Service and supersede all prior negotiations, understandings, and agreements, whether written or oral, relating to the subject matter.
+                </p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="policy-section">
+                <h2>Contact Information</h2>
+                <p>
+                    If you have any questions, concerns, or disputes regarding these Terms of Service, please contact Leadership Academy at:
+                </p>
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mt-4">
+                    <p class="font-semibold text-lg mb-3">Leadership Academy</p>
+                    <p class="mb-2">
+                        <strong>Email:</strong> <a href="mailto:leaddershipacademy@leaddership.co.za" class="text-[#FF5A5F] hover:text-[#FFD166] transition-colors">leaddershipacademy@leaddership.co.za</a>
+                    </p>
+                    <p class="mb-2">
+                        <strong>Website:</strong> <a href="https://leaddership.co.za" class="text-[#FF5A5F] hover:text-[#FFD166] transition-colors">https://leaddership.co.za</a>
+                    </p>
+                    <p class="text-gray-400 text-sm mt-4">
+                        We will make every effort to resolve your concerns within a reasonable timeframe. Please provide detailed information regarding your inquiry to help us assist you more effectively.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Final Notice Section -->
+            <div class="policy-section">
+                <h2>Acknowledgment</h2>
+                <p>
+                    BY ACCESSING AND USING THE SERVICE, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE, UNDERSTAND THEM, AND AGREE TO BE BOUND BY THEM. IF YOU DO NOT AGREE WITH ANY PART OF THESE TERMS, YOU MUST IMMEDIATELY DISCONTINUE YOUR USE OF THE SERVICE.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-16 md:py-20 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">Leadership</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming professionals into confident, effective leaders through comprehensive development programs.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#features" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Features</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#benefits" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Benefits</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#testimonials" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#about" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Blog</a></li>
+                        <li><a href="https://leaddership.co.za/shop" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Connect With Us</h3>
+                    <p class="text-gray-400 mb-6">
+                        <a href="mailto:leaddershipacademy@leaddership.co.za" class="hover:text-[#FF5A5F] transition-colors duration-300">
+                            leaddershipacademy@leaddership.co.za
+                        </a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Leadership Academy. All rights reserved.
+                    </p>
+                    <div class="flex gap-8">
+                        <a href="privacy.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Terms</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
