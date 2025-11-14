@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master the art of authentic leadership and transform your professional presence. Learn proven strategies for building confidence, emotional intelligence, and lasting influence.">
+    <meta name="keywords" content="authentic leadership, professional development, leadership skills, emotional intelligence, confident leadership, personal growth">
+    <meta name="author" content="Leadership Academy">
+    <title>The Art of Authentic Leadership: Building Confidence and Influence | Leadership Academy Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+        }
+        
+        .accent-coral {
+            color: #FF5A5F;
+        }
+        
+        .accent-yellow {
+            color: #FFD166;
+        }
+        
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(255, 90, 95, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-secondary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(255, 209, 102, 0.3);
+        }
+        
+        .feature-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+            border-color: #FF5A5F;
+        }
+        
+        .benefit-item {
+            background: linear-gradient(135deg, #262626 0%, #1F1F1F 100%);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.15);
+        }
+        
+        .testimonial-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+        }
+        
+        .faq-item {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #404040;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #FF5A5F;
+        }
+        
+        .faq-icon {
+            transition: all 0.3s ease-out;
+            width: 24px;
+            height: 24px;
+            color: #FF5A5F;
+        }
+        
+        .faq-answer {
+            margin-top: 1rem;
+            color: #D1D5DB;
+            line-height: 1.75;
+            transition: all 0.3s ease-out;
+        }
+        
+        .star-rating {
+            color: #FFD166;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.05) 100%),
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop') center/cover;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .cta-overlay {
+            background-color: rgba(26, 26, 26, 0.85);
+        }
+        
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 90, 95, 0.1);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover .icon-container {
+            background-color: rgba(255, 90, 95, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .sticky-header {
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 90, 95, 0.1);
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 sticky-header">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex justify-between items-center">
+            <div class="flex items-center justify-between w-full">
+                <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight">Leadership</span>
+                </a>
+                <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s" class="text-gray-300 hover:text-[#FF5A5F] transition-colors duration-300 font-medium">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Content Section -->
+    <section class="py-12 md:py-20 px-8 md:px-16 bg-gray-900">
+        <main class="max-w-4xl mx-auto">
+            <article class="prose prose-lg max-w-none">
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 text-white">The Art of Authentic Leadership: Building Confidence and Influence</h1>
+                
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop&q=80" alt="Professional leader presenting to diverse team in modern office environment" class="w-full rounded-lg shadow-lg mb-8">
+                
+                <p class="mb-6 leading-relaxed text-gray-300 text-lg">In today's rapidly evolving business landscape, authentic leadership has become more valuable than ever. The days of commanding respect through hierarchy alone are fading, replaced by a new paradigm where leaders must genuinely connect with their teams, demonstrate vulnerability, and lead with purpose. This comprehensive guide explores the multifaceted art of authentic leadership and provides actionable strategies to help you build the confidence and influence necessary to lead effectively in the modern workplace.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300 text-lg">Authentic leadership isn't about perfection or having all the answers. Rather, it's about being genuinely yourself while maintaining professional standards, communicating transparently with your team, and making decisions aligned with your core values. When leaders embrace authenticity, they create psychological safety, foster trust, and inspire their teams to perform at their highest levels. This article will guide you through the essential elements of authentic leadership and show you how to cultivate the confidence needed to lead with genuine influence.</p>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">Understanding Authentic Leadership</h2>
+                
+                <p class="mb-4 leading-relaxed text-gray-300">Authentic leadership is grounded in the concept of self-awareness and genuine self-expression within professional boundaries. It represents a departure from the traditional "command and control" leadership style, embracing instead a more humanistic approach that recognizes the value of emotional intelligence, transparency, and shared purpose. Leaders who practice authenticity don't pretend to be someone they're not; they bring their true selves to their work while maintaining professionalism and accountability.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300">The foundation of authentic leadership rests on four key pillars: self-awareness, relational transparency, balanced processing, and internalized moral perspective. Understanding these pillars helps leaders develop a coherent identity that resonates with their teams and creates a foundation for sustainable influence.</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-100">The Four Pillars of Authentic Leadership</h3>
+
+                <ul class="list-disc list-inside mb-6 space-y-3 text-gray-300">
+                    <li class="text-gray-300"><strong>Self-Awareness:</strong> Understanding your strengths, weaknesses, values, and how your behavior impacts others. This requires honest self-reflection and often feedback from trusted colleagues.</li>
+                    <li class="text-gray-300"><strong>Relational Transparency:</strong> Building trust by sharing information openly and presenting yourself honestly to others, without oversharing or compromising professional boundaries.</li>
+                    <li class="text-gray-300"><strong>Balanced Processing:</strong> Seeking diverse perspectives before making decisions, remaining open to criticism, and considering multiple viewpoints rather than relying solely on your own judgment.</li>
+                    <li class="text-gray-300"><strong>Internalized Moral Perspective:</strong> Making decisions based on your core values and principles rather than external pressures or short-term gains.</li>
+                </ul>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">Building Genuine Confidence as a Leader</h2>
+
+                <p class="mb-4 leading-relaxed text-gray-300">Confidence is often misunderstood as arrogance or unwavering certainty. In reality, authentic confidence comes from self-knowledge, competence, and the ability to remain composed in uncertainty. Building genuine confidence as a leader involves developing a realistic understanding of your capabilities, continuously improving your skills, and learning from failures without letting them define you.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300">The path to authentic confidence involves several key strategies that work together to create a strong foundation for leadership presence and influence.</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-100">Strategies for Developing Authentic Leadership Confidence</h3>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>1. Invest in Continuous Learning and Development</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Confidence grows from competence. By continuously developing your skills, staying current with industry trends, and seeking new knowledge, you build a foundation of expertise that naturally translates to confidence. Whether through formal education, professional certifications, or mentorship, ongoing development demonstrates your commitment to excellence and your willingness to grow.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>2. Embrace Vulnerability and Learn from Failure</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Paradoxically, authentic confidence includes the ability to admit when you don't know something or when you've made a mistake. Leaders who acknowledge their limitations and learn from failures demonstrate a level of self-assurance that inspires respect. This vulnerability creates psychological safety for your team, encouraging them to take calculated risks and innovate without fear of severe punishment for honest mistakes.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>3. Develop Emotional Intelligence</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Emotional intelligence—the ability to recognize, understand, and manage your emotions and those of others—is fundamental to authentic confidence. Leaders with high emotional intelligence navigate complex interpersonal situations with grace, communicate effectively during stress, and build stronger relationships with their teams. This skill set directly enhances your ability to lead authentically and with genuine confidence.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>4. Align Actions with Values</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">When your decisions and actions consistently reflect your core values, you develop an internal consistency that radiates confidence. This alignment eliminates the cognitive dissonance that arises when you act against your principles, and it ensures that your leadership is grounded in something deeper than external validation or situational pressures.</p>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">Creating Lasting Influence Through Authenticity</h2>
+
+                <p class="mb-4 leading-relaxed text-gray-300">Influence is the ability to move people to action, to inspire commitment, and to create positive change. True influence doesn't come from positional authority alone; it comes from the respect, trust, and connection you build with others. Authentic leaders create lasting influence by consistently demonstrating integrity, showing genuine interest in their team's development, and communicating a compelling vision that resonates with shared values.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300">Building influence requires intentional effort across multiple dimensions of leadership presence and communication.</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-100">Key Elements of Authentic Influence</h3>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Trust as the Foundation</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Trust is the currency of influence. When people trust you, they're more likely to follow your lead, accept feedback, and go above and beyond their job descriptions. Building trust requires consistency between your words and actions, reliability in following through on commitments, and genuine care for your team's wellbeing and development. Trust isn't built overnight; it's established through repeated demonstrations of integrity and competence.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Clear and Compelling Communication</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Authentic leaders communicate with clarity and purpose. They articulate their vision in ways that help others understand not just what needs to be done, but why it matters. This involves storytelling, sharing personal experiences, and connecting individual tasks to larger organizational goals. When communication is authentic and compelling, it inspires action and creates alignment across teams.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Active Listening and Empathy</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Influence isn't a one-way street. Leaders who genuinely listen to their teams, seek to understand their perspectives, and demonstrate empathy for their challenges build stronger relationships and gain deeper insights. This listening creates a feedback loop that helps you make better decisions and shows your team that their voices matter. People are more influenced by leaders who make them feel heard and valued.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Consistent Demonstration of Competence</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">While authenticity includes acknowledging limitations, it also requires demonstrating genuine competence in your area of leadership. Your team needs to believe that you have the knowledge, skills, and judgment to guide them effectively. This doesn't mean being an expert in everything, but rather showing that you're capable of making sound decisions and solving problems when they arise.</p>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">Overcoming Common Obstacles to Authentic Leadership</h2>
+
+                <p class="mb-4 leading-relaxed text-gray-300">The path to authentic leadership isn't without challenges. Many aspiring leaders face internal and external obstacles that can prevent them from leading authentically. Understanding these obstacles and developing strategies to overcome them is crucial for sustained leadership success.</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-100">Common Challenges and Solutions</h3>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Imposter Syndrome</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Many leaders, particularly those who've achieved significant success, experience imposter syndrome—the persistent belief that they don't deserve their position and will eventually be exposed as a fraud. This internal voice can undermine authentic confidence and prevent leaders from fully embracing their role. Overcoming imposter syndrome involves recognizing your accomplishments, seeking validation from trusted mentors, and reframing failure as a learning opportunity rather than evidence of inadequacy. Remember that most successful leaders have experienced self-doubt; what distinguishes them is their ability to move forward despite it.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Fear of Vulnerability</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">In organizational cultures that equate strength with invulnerability, leaders may fear that showing any weakness will diminish their authority. This fear can lead to defensive behaviors, lack of genuine connection, and missed opportunities for team development. The solution is to recognize that appropriate vulnerability—admitting when you don't know something, asking for help, or acknowledging mistakes—actually strengthens your leadership. Start with small acts of vulnerability in safe contexts, and gradually build comfort with being authentically human at work.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Organizational Culture Misalignment</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Sometimes the broader organizational culture doesn't support authentic leadership. You may work in an environment that values political maneuvering over transparency, or where leaders are expected to maintain a façade of perfection. In these situations, you can still practice authentic leadership within your sphere of influence. Build a team culture that values authenticity, communicate transparently within your team, and gradually influence broader organizational culture through your example and results.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Work-Life Integration Challenges</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Authentic leadership requires bringing your genuine self to work, which can blur the lines between professional and personal identity. This can create anxiety about what aspects of yourself are appropriate to share. The key is finding your own authentic balance—determining which aspects of your personality and values you can comfortably share while maintaining professional boundaries. This balance will be different for each person and may shift over time as you build trust with your team.</p>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">Practical Steps to Implement Authentic Leadership</h2>
+
+                <p class="mb-4 leading-relaxed text-gray-300">Understanding authentic leadership conceptually is one thing; implementing it in your daily work is another. Here are concrete steps you can take to begin your authentic leadership journey:</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-100">Your Action Plan for Authentic Leadership</h3>
+
+                <ol class="list-decimal list-inside mb-6 space-y-3 text-gray-300">
+                    <li class="text-gray-300"><strong>Conduct a Values Audit:</strong> Identify your core values and assess how well your current leadership practices align with them. Where are the gaps? What changes would bring better alignment?</li>
+                    <li class="text-gray-300"><strong>Seek 360-Degree Feedback:</strong> Ask colleagues, direct reports, and supervisors for honest feedback about your leadership strengths and areas for development. This external perspective is invaluable for building self-awareness.</li>
+                    <li class="text-gray-300"><strong>Practice Transparent Communication:</strong> In your next team meeting, share something genuine about a challenge you're facing or a mistake you've made. Notice how your team responds and how it affects the conversation.</li>
+                    <li class="text-gray-300"><strong>Develop Your Emotional Intelligence:</strong> Take an emotional intelligence assessment, read relevant literature, or work with a coach to develop greater awareness of your emotions and their impact on others.</li>
+                    <li class="text-gray-300"><strong>Build a Personal Board of Advisors:</strong> Identify mentors and trusted colleagues who can provide honest feedback and guidance as you develop your authentic leadership style.</li>
+                    <li class="text-gray-300"><strong>Create a Development Plan:</strong> Based on your values audit and feedback, create a specific plan for developing authentic leadership skills. Include learning activities, practice opportunities, and progress milestones.</li>
+                    <li class="text-gray-300"><strong>Establish Regular Reflection Practices:</strong> Schedule time weekly or monthly to reflect on your leadership decisions, how they aligned with your values, and what you're learning about yourself as a leader.</li>
+                </ol>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">The Long-Term Benefits of Authentic Leadership</h2>
+
+                <p class="mb-4 leading-relaxed text-gray-300">Investing in authentic leadership isn't just about becoming a better leader in the moment; it's about creating sustainable success for yourself and your organization. Leaders who practice authenticity experience numerous long-term benefits that compound over time.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Enhanced Team Performance and Engagement</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Teams led by authentic leaders demonstrate higher engagement, better retention, and stronger performance. When people feel genuinely valued and trust their leader, they invest more discretionary effort and are more committed to organizational goals. This translates directly to improved business results and a more positive work environment.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Greater Personal Fulfillment</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Leading authentically reduces the psychological strain of maintaining a false persona at work. When your professional identity aligns with your authentic self, work becomes more fulfilling and less exhausting. You're no longer expending energy on impression management; instead, you can focus that energy on meaningful work and genuine relationships.</p>
+
+                <p class="mb-4 leading-relaxed text-gray-300"><strong>Stronger Organizational Culture</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">Authentic leaders create ripple effects throughout their organizations. As they model transparency, vulnerability, and values-driven decision-making, they give permission for others to do the same. Over time, this contributes to a healthier organizational culture characterized by trust, psychological safety, and shared purpose.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300"><strong>Increased Resilience in Challenging Times</strong></p>
+                <p class="mb-6 leading-relaxed text-gray-300">When organizations face challenges—economic downturns, industry disruption, or crisis situations—authentic leaders are better positioned to navigate them. Their established trust relationships, clear values, and genuine connections with their teams provide a foundation for maintaining cohesion and finding creative solutions during difficult periods.</p>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-white">Conclusion: Your Journey to Authentic Leadership</h2>
+
+                <p class="mb-6 leading-relaxed text-gray-300">The art of authentic leadership is not a destination but a continuous journey of self-discovery, development, and refinement. It requires courage to be genuinely yourself in a professional context, commitment to ongoing growth, and willingness to build relationships based on trust and mutual respect. However, the rewards—both personal and organizational—are substantial and well worth the effort.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300">As you embark on or continue your authentic leadership journey, remember that perfection is not the goal. What matters is the consistency between your values and actions, your genuine interest in developing others, and your commitment to leading with integrity. Start with small steps, seek feedback, learn from your experiences, and gradually build the confidence and influence that comes from leading authentically.</p>
+
+                <p class="mb-6 leading-relaxed text-gray-300">The world needs more authentic leaders—people who lead with purpose, connect genuinely with others, and make decisions aligned with their values. By committing to authentic leadership, you're not just developing yourself; you're contributing to a more positive, trustworthy, and effective workplace for everyone. Your authentic leadership journey begins now.</p>
+
+                <div class="mt-12 p-8 bg-gradient-to-r from-[#FF5A5F] to-[#FFD166] rounded-xl">
+                    <p class="text-center text-gray-900 font-semibold text-lg">Ready to develop your authentic leadership skills? Explore our comprehensive professional development programs designed to build confidence, emotional intelligence, and lasting influence.</p>
+                    <div class="text-center mt-6">
+                        <a href="https://leaddership.co.za/shop" class="btn-primary inline-block">
+                            Explore Our Programs
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-16 md:py-20 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">Leadership</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming professionals into confident, effective leaders through comprehensive development programs.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#features" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Features</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#benefits" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Benefits</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#testimonials" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#about" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Blog</a></li>
+                        <li><a href="https://leaddership.co.za/shop" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Connect With Us</h3>
+                    <p class="text-gray-400 mb-6">
+                        <a href="mailto:leaddershipacademy@leaddership.co.za" class="hover:text-[#FF5A5F] transition-colors duration-300">
+                            leaddershipacademy@leaddership.co.za
+                        </a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Leadership Academy. All rights reserved.
+                    </p>
+                    <div class="flex gap-8">
+                        <a href="privacy.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Terms</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
