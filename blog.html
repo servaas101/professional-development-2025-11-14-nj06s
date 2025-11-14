@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our comprehensive blog on professional development, leadership strategies, and personal growth. Gain insights from industry experts to transform your career.">
+    <meta name="keywords" content="professional development blog, leadership articles, career growth, skill development, leadership tips">
+    <meta name="author" content="Leadership Academy">
+    <title>Blog | Professional Development & Leadership Insights | Leadership Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+        }
+        
+        .accent-coral {
+            color: #FF5A5F;
+        }
+        
+        .accent-yellow {
+            color: #FFD166;
+        }
+        
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(255, 90, 95, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-secondary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(255, 209, 102, 0.3);
+        }
+        
+        .feature-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+            border-color: #FF5A5F;
+        }
+        
+        .benefit-item {
+            background: linear-gradient(135deg, #262626 0%, #1F1F1F 100%);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.15);
+        }
+        
+        .testimonial-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+        }
+        
+        .blog-card {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+            border: 1px solid #404040;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 90, 95, 0.2);
+            border-color: #FF5A5F;
+        }
+        
+        .faq-item {
+            background-color: #262626;
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #404040;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #FF5A5F;
+        }
+        
+        .faq-icon {
+            transition: all 0.3s ease-out;
+            width: 24px;
+            height: 24px;
+            color: #FF5A5F;
+        }
+        
+        .faq-answer {
+            margin-top: 1rem;
+            color: #D1D5DB;
+            line-height: 1.75;
+            transition: all 0.3s ease-out;
+        }
+        
+        .star-rating {
+            color: #FFD166;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.05) 100%),
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop') center/cover;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .cta-overlay {
+            background-color: rgba(26, 26, 26, 0.85);
+        }
+        
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 90, 95, 0.1);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover .icon-container {
+            background-color: rgba(255, 90, 95, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .sticky-header {
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 90, 95, 0.1);
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 sticky-header">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex justify-between items-center">
+            <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-white text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight">Leadership</span>
+            </a>
+            
+            <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s" class="text-gray-300 hover:text-[#FF5A5F] transition-colors duration-300 font-medium">
+                ← Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="hero-gradient py-20 md:py-32 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                    Our <span class="text-[#FF5A5F]">Blog</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed font-medium">
+                    Insights, Strategies, and Wisdom for Professional Growth
+                </p>
+                <p class="text-lg text-gray-400 max-w-3xl leading-relaxed">
+                    Welcome to the Leadership Academy blog – your go-to resource for transformative insights on professional development, authentic leadership, and personal growth. Our expert contributors share proven strategies, actionable frameworks, and real-world experiences to help you navigate career challenges, develop leadership excellence, and unlock your full potential. Whether you're an emerging leader seeking to build confidence or an experienced executive looking to refine your approach, our articles provide the guidance and inspiration you need to lead with purpose and impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                    Featured <span class="text-[#FF5A5F]">Article</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Our latest insights on leadership and professional development
+                </p>
+            </div>
+
+            <div class="blog-card mb-12">
+                <div class="mb-6">
+                    <span class="inline-block text-sm font-semibold text-[#FFD166] bg-[#FFD166] bg-opacity-10 px-4 py-2 rounded-full mb-4">
+                        Featured
+                    </span>
+                    <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
+                        The Art of Authentic Leadership: Building Confidence and Influence
+                    </h3>
+                    <div class="flex flex-col md:flex-row md:items-center md:gap-6 mb-8">
+                        <span class="text-gray-400">
+                            <i class="far fa-calendar text-[#FF5A5F] mr-2"></i>
+                            November 14, 2025
+                        </span>
+                        <span class="text-gray-400">
+                            <i class="far fa-clock text-[#FF5A5F] mr-2"></i>
+                            12 min read
+                        </span>
+                        <span class="text-gray-400">
+                            <i class="fas fa-user text-[#FF5A5F] mr-2"></i>
+                            Leadership Academy Team
+                        </span>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 leading-relaxed text-lg mb-8">
+                    Authentic leadership transforms how professionals lead in modern workplaces. Rather than commanding through hierarchy, authentic leaders connect genuinely with teams, demonstrate vulnerability, and lead with purpose. This approach builds trust, psychological safety, and inspires superior performance. The foundation rests on four pillars: self-awareness, relational transparency, balanced processing, and internalized moral perspective. Genuine confidence emerges from competence, continuous learning, and embracing failure as opportunity. Leaders create lasting influence through trust, clear communication, active listening, and consistent competence. While obstacles like imposter syndrome exist, practical steps including values audits, 360-degree feedback, and transparent communication enable authentic leadership development. The result: enhanced engagement, personal fulfillment, and sustainable organizational success.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s/blog/the-art-of-authentic-leadership-building-confidenc.html" class="btn-primary text-center inline-block">
+                        Read Full Article
+                    </a>
+                    <button class="px-8 py-4 border-2 border-[#FFD166] text-[#FFD166] font-bold text-lg rounded-lg hover:bg-[#FFD166] hover:text-[#1A1A1A] transition-all duration-300 hover:scale-105">
+                        Share Article
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                    Explore by <span class="text-[#FF5A5F]">Category</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Browse articles by topic to find content most relevant to your professional journey
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Category Card 1 -->
+                <div class="feature-card">
+                    <div class="icon-container mb-6">
+                        <svg class="w-8 h-8 text-[#FF5A5F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Leadership Development</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Master the core competencies of effective leadership, from emotional intelligence to strategic decision-making and team dynamics.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Explore Category
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Category Card 2 -->
+                <div class="feature-card">
+                    <div class="icon-container mb-6">
+                        <svg class="w-8 h-8 text-[#FF5A5F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Career Advancement</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Navigate promotions, salary negotiations, and career transitions with strategies designed for sustainable professional growth.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Explore Category
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Category Card 3 -->
+                <div class="feature-card">
+                    <div class="icon-container mb-6">
+                        <svg class="w-8 h-8 text-[#FF5A5F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Personal Growth</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Develop resilience, confidence, and self-awareness through practical techniques and mindset shifts that drive lasting transformation.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Explore Category
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Articles Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                    Recent <span class="text-[#FF5A5F]">Articles</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Discover our latest insights and expert perspectives on professional development
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+                <!-- Article Placeholder 1 -->
+                <div class="blog-card">
+                    <div class="mb-6">
+                        <span class="inline-block text-xs font-semibold text-[#FF5A5F] bg-[#FF5A5F] bg-opacity-10 px-3 py-1 rounded-full mb-4">
+                            Coming Soon
+                        </span>
+                        <h3 class="text-2xl font-bold tracking-tight mb-4 leading-tight">
+                            Emotional Intelligence: The Hidden Driver of Leadership Success
+                        </h3>
+                        <div class="flex items-center gap-4 mb-6 text-gray-400">
+                            <span class="text-sm">
+                                <i class="far fa-calendar text-[#FFD166] mr-2"></i>
+                                December 2025
+                            </span>
+                            <span class="text-sm">
+                                <i class="far fa-clock text-[#FFD166] mr-2"></i>
+                                8 min read
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Discover how emotional intelligence shapes leadership effectiveness and learn practical techniques to develop your EQ...
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Read Article
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Article Placeholder 2 -->
+                <div class="blog-card">
+                    <div class="mb-6">
+                        <span class="inline-block text-xs font-semibold text-[#FF5A5F] bg-[#FF5A5F] bg-opacity-10 px-3 py-1 rounded-full mb-4">
+                            Coming Soon
+                        </span>
+                        <h3 class="text-2xl font-bold tracking-tight mb-4 leading-tight">
+                            Building High-Performance Teams: From Conflict to Collaboration
+                        </h3>
+                        <div class="flex items-center gap-4 mb-6 text-gray-400">
+                            <span class="text-sm">
+                                <i class="far fa-calendar text-[#FFD166] mr-2"></i>
+                                December 2025
+                            </span>
+                            <span class="text-sm">
+                                <i class="far fa-clock text-[#FFD166] mr-2"></i>
+                                10 min read
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Learn proven strategies for transforming team dynamics, fostering psychological safety, and driving collective excellence...
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Read Article
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Article Placeholder 3 -->
+                <div class="blog-card">
+                    <div class="mb-6">
+                        <span class="inline-block text-xs font-semibold text-[#FF5A5F] bg-[#FF5A5F] bg-opacity-10 px-3 py-1 rounded-full mb-4">
+                            Coming Soon
+                        </span>
+                        <h3 class="text-2xl font-bold tracking-tight mb-4 leading-tight">
+                            Overcoming Imposter Syndrome: Strategies for Sustained Confidence
+                        </h3>
+                        <div class="flex items-center gap-4 mb-6 text-gray-400">
+                            <span class="text-sm">
+                                <i class="far fa-calendar text-[#FFD166] mr-2"></i>
+                                December 2025
+                            </span>
+                            <span class="text-sm">
+                                <i class="far fa-clock text-[#FFD166] mr-2"></i>
+                                7 min read
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Practical frameworks to recognize and overcome imposter syndrome, build authentic confidence, and own your achievements...
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Read Article
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Article Placeholder 4 -->
+                <div class="blog-card">
+                    <div class="mb-6">
+                        <span class="inline-block text-xs font-semibold text-[#FF5A5F] bg-[#FF5A5F] bg-opacity-10 px-3 py-1 rounded-full mb-4">
+                            Coming Soon
+                        </span>
+                        <h3 class="text-2xl font-bold tracking-tight mb-4 leading-tight">
+                            Strategic Communication: Influencing Without Authority
+                        </h3>
+                        <div class="flex items-center gap-4 mb-6 text-gray-400">
+                            <span class="text-sm">
+                                <i class="far fa-calendar text-[#FFD166] mr-2"></i>
+                                January 2026
+                            </span>
+                            <span class="text-sm">
+                                <i class="far fa-clock text-[#FFD166] mr-2"></i>
+                                9 min read
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Master the art of persuasion and influence through strategic communication, active listening, and authentic presence...
+                    </p>
+                    <a href="#" class="inline-flex items-center text-[#FFD166] hover:text-[#FF5A5F] transition-colors duration-300 font-semibold">
+                        Read Article
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="cta-section">
+                <div class="cta-overlay py-20 md:py-32 px-8 md:px-16">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                            Stay Updated With <span class="text-[#FF5A5F]">New Insights</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+                            Subscribe to our newsletter and receive exclusive articles, expert tips, and leadership strategies delivered directly to your inbox. Transform your professional journey one insight at a time.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                            <input 
+                                type="email" 
+                                placeholder="Enter your email address" 
+                                class="flex-1 px-6 py-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:border-[#FF5A5F] focus:outline-none transition-colors duration-300"
+                            >
+                            <button class="btn-primary">
+                                Subscribe
+                            </button>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-6">
+                            No spam, just valuable content. Unsubscribe anytime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-16 md:py-20 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">Leadership</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming professionals into confident, effective leaders through comprehensive development programs.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#features" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Features</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#benefits" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Benefits</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#testimonials" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="https://servaas101.github.io/professional-development-2025-11-14-nj06s#about" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Blog</a></li>
+                        <li><a href="https://leaddership.co.za/shop" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Connect With Us</h3>
+                    <p class="text-gray-400 mb-6">
+                        <a href="mailto:leaddershipacademy@leaddership.co.za" class="hover:text-[#FF5A5F] transition-colors duration-300">
+                            leaddershipacademy@leaddership.co.za
+                        </a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#FF5A5F] transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Leadership Academy. All rights reserved.
+                    </p>
+                    <div class="flex gap-8">
+                        <a href="privacy.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Terms</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-[#FF5A5F] transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
